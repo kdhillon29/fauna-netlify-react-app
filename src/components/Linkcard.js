@@ -31,7 +31,7 @@ export default function Linkcard({link,refreshLinks}) {
         // console.log(editLink)
       // console.log(mylink)
         try {
-            await fetch('./api/updateLink',{
+            await fetch('./.netlify/functions/updateLink',{
                 method:'PUT',
                 body:JSON.stringify(editLink)
             })
@@ -50,7 +50,7 @@ export default function Linkcard({link,refreshLinks}) {
         setLoading(true)
           const id =link._id
         try{
-            await fetch('./api/deleteLink',{
+            await fetch('./.netlify/functions/deleteLink',{
                 method:'DELETE',
                 body:JSON.stringify({id})
             })

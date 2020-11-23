@@ -19,7 +19,7 @@ const LinkForm = ({refreshLinks,toggleAddForm}) => {
        const link={name,url,description}
        console.log(link)
         try{
-           const res = await fetch('/api/createLink',{
+           const res = await fetch('/.netlify/functions/createLink',{
                 method:'POST',
                 body:JSON.stringify(link)
             });
